@@ -1,0 +1,2 @@
+require("mvx")
+print("Hello")
