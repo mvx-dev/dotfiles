@@ -3,3 +3,4 @@ if status is-interactive
 end
 set fish_greeting
 alias ls "eza -alo --git --group-directories-first"
+zoxide init --cmd cd fish | source
