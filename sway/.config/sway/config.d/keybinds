@@ -1,0 +1,86 @@
+# Basic Keybindings
+	# Start a terminal
+	bindsym $mod+Return exec $term
+
+	# Kill a focused window
+	bindsym $mod+q kill
+
+	# Start launcher
+	bindsym $mod+d exec $menu
+
+	# Move window with mod+left click
+	# Resize with mod+right click
+	floating_modifier $mod normal
+
+	# Reload configuration file
+	bindsym $mod+Shift+c reload
+
+	# Exit sway
+	bindsym $mod+Shift+e exec swaymsg -t warning -m "Really quit? This will end the current wayland session." -B "Exit" "swaymsg exit"
+
+# Move focus
+	bindsym $mod+$left focus left
+	bindsym $mod+$down focus down
+	bindsym $mod+$up focus up
+	bindsym $mod+$right focus right
+
+	bindsym $mod+Left focus left
+	bindsym $mod+Down focus down
+	bindsym $mod+Up focus up
+	bindsym $mod+Right focus right
+
+# Move focused window
+	bindsym $mod+$left move left
+	bindsym $mod+$down move down
+	bindsym $mod+$up move up
+	bindsym $mod+$right move right
+
+	bindsym $mod+Left move left
+	bindsym $mod+Down move down
+	bindsym $mod+Up move up
+	bindsym $mod+Right move right
+
+# Switch to workspace
+	bindsym $mod+1 workspace $ws1
+	bindsym $mod+2 workspace $ws2
+	bindsym $mod+3 workspace $ws3
+	bindsym $mod+4 workspace $ws4
+	bindsym $mod+5 workspace $ws5
+	bindsym $mod+6 workspace $ws6
+	bindsym $mod+7 workspace $ws7
+	bindsym $mod+8 workspace $ws8
+	bindsym $mod+9 workspace $ws9
+	bindsym $mod+0 workspace $ws10
+
+# Move window to workspace
+	bindsym $mod+Shift+1 move container to workspace $ws1
+	bindsym $mod+Shift+2 move container to workspace $ws2
+	bindsym $mod+Shift+3 move container to workspace $ws3
+	bindsym $mod+Shift+4 move container to workspace $ws4
+	bindsym $mod+Shift+5 move container to workspace $ws5
+	bindsym $mod+Shift+6 move container to workspace $ws6
+	bindsym $mod+Shift+7 move container to workspace $ws7
+	bindsym $mod+Shift+8 move container to workspace $ws8
+	bindsym $mod+Shift+9 move container to workspace $ws9
+	bindsym $mod+Shift+0 move container to workspace $ws10
+
+# Layout
+	# Split the current object of focus
+	bindsym $mod+b splith
+	bindsym $mod+v splitv
+
+	# Switch the current container between different layout styles
+	bindsym $mod+s layout stacking
+	bindsym $mod+w layout tabbed
+	bindsym $mod+e layout toggle split
+
+	# Make the current focus fullscreen
+	bindsym $mod+f fullscreen
+
+	# Toggle the current focus between tiling and floating mode
+	bindsym $mod+Shift+space floating toggle
+
+	# Swap focus between the tiling area and the floating area
+	bindsym $mod+space focus mode_focus
+
+	# Move focus to the parent container
