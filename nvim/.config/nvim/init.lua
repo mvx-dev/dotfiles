@@ -1,2 +1,1 @@
 require("mvx")
-print("Hello")
