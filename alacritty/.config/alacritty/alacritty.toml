@@ -2,3 +2,7 @@ import = ["/home/cheshire/.config/alacritty/colours.toml", "/home/cheshire/.conf
 
 [shell]
 program = "/bin/fish"
+
+[window]
+opacity = 0.9
+blur = true
