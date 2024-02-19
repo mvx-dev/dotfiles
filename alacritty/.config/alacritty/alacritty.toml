@@ -1,20 +1,4 @@
-import = ["/home/cheshire/.config/alacritty/themes/themes/breeze.toml"]
-
-[font.bold]
-family = "JetBrainsMonoNerdFont"
-style = "Light"
-
-[font.bold_italic]
-family = "JetBrainsMonoNerdFont"
-style = "LightItalic"
-
-[font.italic]
-family = "JetBrainsMonoNerdFont"
-style = "ExtraLightItalic"
-
-[font.normal]
-family = "JetBrainsMonoNerdFont"
-style = "ExtraLight"
+import = ["/home/cheshire/.config/alacritty/colours.toml", "/home/cheshire/.config/alacritty/fonts.toml"]
 
 [shell]
 program = "/bin/fish"

@@ -1,0 +1,15 @@
+[font.bold]
+family = "JetBrainsMonoNerdFont"
+style = "Light"
+
+[font.bold_italic]
+family = "JetBrainsMonoNerdFont"
+style = "LightItalic"
+
+[font.italic]
+family = "JetBrainsMonoNerdFont"
+style = "ExtraLightItalic"
+
+[font.normal]
+family = "JetBrainsMonoNerdFont"
+style = "ExtraLight"
