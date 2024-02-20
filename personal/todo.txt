@@ -1,0 +1,33 @@
+- Install script
+- Sys-wide conf script
+	A config file that has all the system wide config stuff:
+	- colour theme
+	- workspace icon
+	- system apps (terminal, launcher, etc)
+	And a script to get all that stuff from any config file that
+	can execute arbitrary code
+- Aesthetics
+	- waybar
+	- wofi
+	- window decoration
+		- gaps
+		- border colour
+		- border radius(?)
+	- home page
+		- sysfetch
+- Configuration app
+	An application to configure everything using the universal config file
+- Power menu using wofi
+	A pop-up wofi menu for options such as logout, shutdown, sleep,
+	hibernate, etc.
+- Login daemon
+	SDDM possibly? Try to use swaylock/swayidle
+- Screen locking
+	Use swayidle/swaylock
+- Add all config files to stow/git repository
+
+Personal:
+- text-based interfaces
+	- discord
+	- spotify
+	- steam(?)
