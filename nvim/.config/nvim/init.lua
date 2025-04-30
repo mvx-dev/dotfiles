@@ -1,1 +1,1 @@
-require("mvx")
+require("config")

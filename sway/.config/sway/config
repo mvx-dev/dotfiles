@@ -24,8 +24,9 @@ set $menu wofi --show drun | xargs swaymsg exec --
 # output HDMI-A-1 resolution 1920x1080 position 1920,0
 # 
 # Get the names of the display outputs with swaymsg -t get_outputs
-output * scale 1.5
+output * scale 1.25
 output * bg ~/.assets/backgrounds/wallpaper.jpg fill
+output DP-1 resolution 2560x1440@144Hz position 0,0
 
 # Remove window title
 default_border pixel
@@ -228,5 +229,3 @@ include @sysconfigdir@/sway/config.d/*
 
 # Run startup applications
 exec swaymsg "workspace $ws1; exec $term"
-exec swaymsg "workspace $ws2; exec firefox"
-exec swaymsg "workspace $ws3; exec $term --command nvim /home/cheshire/code"

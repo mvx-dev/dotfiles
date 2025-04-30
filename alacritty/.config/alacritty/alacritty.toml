@@ -1,8 +1,12 @@
-import = ["/home/cheshire/.config/alacritty/colours.toml", "/home/cheshire/.config/alacritty/fonts.toml"]
 
-[shell]
+[terminal.shell]
 program = "/bin/fish"
 
 [window]
 opacity = 0.9
 blur = true
+
+[general]
+import = ["/home/cheshire/.config/alacritty/colours.toml", "/home/cheshire/.config/alacritty/fonts.toml"]
+
+[terminal]
