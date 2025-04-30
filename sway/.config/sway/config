@@ -22,11 +22,11 @@ set $menu wofi --show drun | xargs swaymsg exec --
 # Example configuration:
 #
 # output HDMI-A-1 resolution 1920x1080 position 1920,0
-# 
+#
 # Get the names of the display outputs with swaymsg -t get_outputs
 output * scale 1.25
 output * bg ~/.assets/backgrounds/wallpaper.jpg fill
-output DP-1 resolution 2560x1440@144Hz position 0,0
+output DP-1 mode 2560x1440@144.006Hz position 0,0
 
 # Remove window title
 default_border pixel
