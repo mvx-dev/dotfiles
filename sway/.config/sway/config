@@ -26,7 +26,7 @@ set $menu wofi --show drun | xargs swaymsg exec --
 # Get the names of the display outputs with swaymsg -t get_outputs
 output * scale 1.25
 output * bg ~/.assets/backgrounds/wallpaper.jpg fill
-output DP-1 mode 2560x1440@144.006Hz position 0,0
+output DP-1 resolution 2560x1440@144Hz position 0,0
 
 # Remove window title
 default_border pixel
@@ -60,16 +60,16 @@ default_border pixel
 # Read `man 5 sway-input` for more information about this section.
 
 # Set workspaces
-set $ws1 1:
-set $ws2 2:󰈹
-set $ws3 3:
-set $ws4 4:A
-set $ws5 5:B
-set $ws6 6:C
-set $ws7 7:D
-set $ws8 8:E
-set $ws9 9:F
-set $ws10 10:G
+set $ws1 
+set $ws2 󰈹
+set $ws3 
+set $ws4 A
+set $ws5 B
+set $ws6 C
+set $ws7 D
+set $ws8 E
+set $ws9 F
+set $ws10 G
 
 ### Key bindings
 #
@@ -229,3 +229,4 @@ include @sysconfigdir@/sway/config.d/*
 
 # Run startup applications
 exec swaymsg "workspace $ws1; exec $term"
+exec gentoo-pipewire-launcher
