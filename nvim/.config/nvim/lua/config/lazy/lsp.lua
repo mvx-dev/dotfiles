@@ -28,6 +28,13 @@ return {
             ensure_installed = {
                 "lua_ls",
                 "rust_analyzer",
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD:nvim/.config/nvim/lua/mvx/lazy/lsp.lua
+                "ruff",
+=======
+>>>>>>> 113cce92f3a9d048a2bb50fc6d4b545bafec2ee2:nvim/.config/nvim/lua/config/lazy/lsp.lua
+>>>>>>> Stashed changes
             },
             handlers = {
                 function(server_name) -- default handler (optional)

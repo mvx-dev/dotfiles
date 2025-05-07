@@ -26,7 +26,15 @@ set $menu wofi --show drun | xargs swaymsg exec --
 # Get the names of the display outputs with swaymsg -t get_outputs
 output * scale 1.25
 output * bg ~/.assets/backgrounds/wallpaper.jpg fill
+<<<<<<< Updated upstream
 output DP-1 resolution 2560x1440@144Hz position 0,0
+=======
+<<<<<<< HEAD
+output * resolution 2560x1440 position 0,0
+=======
+output DP-1 resolution 2560x1440@144Hz position 0,0
+>>>>>>> 113cce92f3a9d048a2bb50fc6d4b545bafec2ee2
+>>>>>>> Stashed changes
 
 # Remove window title
 default_border pixel
@@ -60,6 +68,21 @@ default_border pixel
 # Read `man 5 sway-input` for more information about this section.
 
 # Set workspaces
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+set $ws1 1
+set $ws2 2
+set $ws3 3
+set $ws4 4
+set $ws5 5
+set $ws6 6
+set $ws7 7
+set $ws8 8
+set $ws9 9
+set $ws10 10
+=======
+>>>>>>> Stashed changes
 set $ws1 
 set $ws2 󰈹
 set $ws3 
@@ -70,6 +93,10 @@ set $ws7 D
 set $ws8 E
 set $ws9 F
 set $ws10 G
+<<<<<<< Updated upstream
+=======
+>>>>>>> 113cce92f3a9d048a2bb50fc6d4b545bafec2ee2
+>>>>>>> Stashed changes
 
 ### Key bindings
 #
@@ -228,5 +255,16 @@ bar {
 include @sysconfigdir@/sway/config.d/*
 
 # Run startup applications
+<<<<<<< Updated upstream
 exec swaymsg "workspace $ws1; exec $term"
 exec gentoo-pipewire-launcher
+=======
+<<<<<<< HEAD
+exec mako
+exec waybar
+exec autotiling-rs
+=======
+exec swaymsg "workspace $ws1; exec $term"
+exec gentoo-pipewire-launcher
+>>>>>>> 113cce92f3a9d048a2bb50fc6d4b545bafec2ee2
+>>>>>>> Stashed changes
