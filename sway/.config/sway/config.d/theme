@@ -1,0 +1,8 @@
+# Theme config file for Sway
+default_border pixel
+
+# Change border colours
+client.focused #cba6f7 #cba6f7 #cba6f7 #cba6f7 #cba6f7
+
+# Enable blur
+blur enable

@@ -1,4 +1,4 @@
-# Default configuration for sway
+# Include extra config files
 
 ### Variables
 # Logo key. Use Mod1 for alt
@@ -24,20 +24,9 @@ set $menu wofi --show drun | xargs swaymsg exec --
 # output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # Get the names of the display outputs with swaymsg -t get_outputs
-output * scale 1.25
+output * scale 1.5
 output * bg ~/.assets/backgrounds/wallpaper.jpg fill
-<<<<<<< Updated upstream
-output DP-1 resolution 2560x1440@144Hz position 0,0
-=======
-<<<<<<< HEAD
-output * resolution 2560x1440 position 0,0
-=======
-output DP-1 resolution 2560x1440@144Hz position 0,0
->>>>>>> 113cce92f3a9d048a2bb50fc6d4b545bafec2ee2
->>>>>>> Stashed changes
 
-# Remove window title
-default_border pixel
 
 ### Idle configuration
 #
@@ -68,9 +57,6 @@ default_border pixel
 # Read `man 5 sway-input` for more information about this section.
 
 # Set workspaces
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
 set $ws1 1
 set $ws2 2
 set $ws3 3
@@ -81,22 +67,6 @@ set $ws7 7
 set $ws8 8
 set $ws9 9
 set $ws10 10
-=======
->>>>>>> Stashed changes
-set $ws1 
-set $ws2 󰈹
-set $ws3 
-set $ws4 A
-set $ws5 B
-set $ws6 C
-set $ws7 D
-set $ws8 E
-set $ws9 F
-set $ws10 G
-<<<<<<< Updated upstream
-=======
->>>>>>> 113cce92f3a9d048a2bb50fc6d4b545bafec2ee2
->>>>>>> Stashed changes
 
 ### Key bindings
 #
@@ -233,38 +203,9 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-#
-# Status bar:
-#
-bar {
-	position top
-
-	# When status_command prints a new line to stdout, swaybar updates.
-	# The default just shows the current date and time.
-	status_command while date +'%Y-%m-%d %X'; do sleep 1; done
-
-	strip_workspace_numbers yes
-
-	colors {
-		statusline #ffffff
-		background #323232
-		inactive_workspace #32323200 #32323200 #5c5c5c
-	}
-}
-
-include @sysconfigdir@/sway/config.d/*
+include config.d/*
 
 # Run startup applications
-<<<<<<< Updated upstream
-exec swaymsg "workspace $ws1; exec $term"
-exec gentoo-pipewire-launcher
-=======
-<<<<<<< HEAD
 exec mako
 exec waybar
 exec autotiling-rs
-=======
-exec swaymsg "workspace $ws1; exec $term"
-exec gentoo-pipewire-launcher
->>>>>>> 113cce92f3a9d048a2bb50fc6d4b545bafec2ee2
->>>>>>> Stashed changes
