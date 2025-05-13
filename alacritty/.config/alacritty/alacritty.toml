@@ -1,20 +1,11 @@
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-[env]
-TERM = "xterm-256color"
-=======
->>>>>>> 113cce92f3a9d048a2bb50fc6d4b545bafec2ee2
->>>>>>> Stashed changes
-
 [terminal.shell]
 program = "/bin/fish"
 
 [window]
-opacity = 0.9
+opacity = 0.7
 blur = true
 
 [general]
-import = ["/home/cheshire/.config/alacritty/colours.toml", "/home/cheshire/.config/alacritty/fonts.toml"]
+import = ["/home/cheshire/.config/alacritty/themes/catppuccin-mocha.toml",
+    "/home/cheshire/.config/alacritty/fonts.toml"]
 
-[terminal]
