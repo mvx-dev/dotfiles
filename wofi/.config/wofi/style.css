@@ -1,0 +1,30 @@
+@import url('../../.assets/colours.css');
+#window {
+    background-color: rgba(30, 30, 46, 0.8);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-size: 15px;
+}
+#input {
+    background-color: rgba(30, 30, 46, 0.8);
+    color: #cdd6f4;
+    border: none;
+    border-bottom: 1px solid rgba(30, 30, 46, 0.8);
+    padding: 5px 10px;
+    font-size: 17px;
+    border-size: 10px 10px 0 0;
+}
+#input:focus, #input:focus-visible, #input:active {
+    border: none;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+#entry {
+    color: #cdd6f4;
+    background-color: rgba(24, 24, 24, 0.1);
+}
+#entry:selected {
+    color: #cdd6f4;
+    outline-style: solid;
+    outline-color: #cba6f7;
+}
