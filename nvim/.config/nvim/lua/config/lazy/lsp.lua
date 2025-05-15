@@ -28,14 +28,7 @@ return {
             ensure_installed = {
                 "lua_ls",
                 "rust_analyzer",
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD:nvim/.config/nvim/lua/mvx/lazy/lsp.lua
                 "ruff",
-=======
->>>>>>> 113cce92f3a9d048a2bb50fc6d4b545bafec2ee2:nvim/.config/nvim/lua/config/lazy/lsp.lua
->>>>>>> Stashed changes
-            },
             handlers = {
                 function(server_name) -- default handler (optional)
 
@@ -58,7 +51,7 @@ return {
                     }
                 end,
             }
-        })
+        }})
 
         local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
@@ -71,7 +64,7 @@ return {
             mapping = cmp.mapping.preset.insert({
                 ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
                 ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
-                ['<C-y>'] = cmp.mapping.confirm({ select = true }),
+                ['<Enter>'] = cmp.mapping.confirm({ select = true }),
                 ["<C-Space>"] = cmp.mapping.complete(),
             }),
             sources = cmp.config.sources({
