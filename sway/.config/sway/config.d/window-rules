@@ -1,3 +1,6 @@
 for_window {
+    # Apps by ID
     [app_id="float-term"] floating enable
+    # Apps by title
+    [title="Extension"] floating enable
 }
