@@ -4,3 +4,12 @@ end
 set fish_greeting
 alias ls "eza -alo --git --group-directories-first"
 zoxide init --cmd cd fish | source
+
+function y
+	set tmp (mktemp -t "yazi-cwd.XXXXXX")
+	yazi $argv --cwd-file="$tmp"
+	if read -z cwd < "$tmp"; and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+		builtin cd -- "$cwd"
+	end
+	rm -f -- "$tmp"
+end
