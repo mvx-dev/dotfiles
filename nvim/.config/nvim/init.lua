@@ -1,17 +1,14 @@
---rose-pine call nvim settings
+-- Call Neovim settings
 require("config.settings")
 
--- call lazy (plugin manager)
+-- Call lazy.nvim
 require("config.lazy")
 
--- call custom keybinds for plugins
+-- Call custom keybinds for plugins
 require("config.keybinds")
 
--- call lsp and related settings
+-- Call LSP and related settings
 require("config.lsp")
-
--- call colourschemehe
-vim.cmd([[colorscheme catppuccin]])
 
 require("notify").setup({
     background_colour = "#000000",

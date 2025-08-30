@@ -25,6 +25,9 @@ return {
             javascript = { "prettierd", "prettier", stop_after_first = true },
             c = { "clangd-format" },
             cpp = { "clangd-format" },
+            rust = { "rustfmt" },
+            go = { "goimports", "gofmt" },
+            ["*"] = { "codespell" },
         },
         -- Set default options
         default_format_opts = {
@@ -41,6 +44,7 @@ return {
                 prepend_args = { "--style=file" },
             }
         },
+        notify_no_formatters = true,
     },
     init = function()
         -- If you want the formatexpr, here is the place to set it
