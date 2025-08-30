@@ -1,0 +1,47 @@
+# Keywords that trigger warnings (case-insensitive)
+keywords = ["manual intervention",]
+
+# If true, match all news posts regardless of keywords
+match_all_entries = false
+
+# Ignore news entries containing any of these keywords
+ignored_keywords = []
+
+# Whether keyword query is case sensitive (Applies to both ignore and regular keywords)
+case_sensitive = false
+
+# Include the summary in keyword matching
+include_summary_in_query=true
+
+# Whether to add installed package names to keyword matching
+# Recommended to disable include_summary_in_query with this option
+include_installed_packages = false
+
+# Both of these conditions must be met to prune a cached news entry:
+# 1. It has not been seen in the RSS feed for `prune_missing_days`, AND
+# 2. It is older than `prune_age_days`.
+# This avoids removing entries that may temporarily disappear from the feed.
+prune_missing_days = 30
+prune_age_days = 60
+
+
+# RSS feed URLs to check
+# Adding feeds with high latency can massively impact performance
+rss_feed_urls = [
+    "https://archlinux.org/feeds/news/",
+]
+
+# Timeout (in seconds) for any HTTP requests to RSS feeds
+request_timeout = 10
+
+# Display summaries for matching news posts
+show_summary = false
+
+# Automatically mark entries as read after showing them
+mark_as_read_automatically = true
+
+# Warn only (don’t block pacman) - essentially dry-run
+warn_only = false
+
+# Where to store the cache
+cache_path = "/var/cache/arch-manwarn.json"
