@@ -9,26 +9,28 @@ set $down j
 set $up k
 set $right l
 # Default terminal emulator
-set $term alacritty
+set $term kitty
 # Application launcher
 # Note: pass the final command to swaymsg so that the resulting
 # window can be opened on the original workspace that the command
 # was run on.
-set $menu wofi --show drun | xargs swaymsg exec --
+set $menu rofi -show drun | xargs swaymsg exec --
+
+# Script location
+set $scripts $HOME/.config/sway/scripts
 
 ### Output configuration
-output * scale 1.5
-output * bg ~/.assets/backgrounds/wallpaper.jpg fill
+# Fermium Outputs
+output DP-1 scale 1.1
+output * bg ~/.assets/wallpapers/wallpaper.jpg fill
+output DP-1 pos 1600 0 res 2560x1440@144.006Hz
+output DP-2 pos 0 0 res 1600x900@59.978Hz
 
 #
 # Idle/lock configuration
 #
-bindsym $mod+Shift+x exec swaylock
+bindsym $mod+Shift+x exec hyprlock
 
-exec swayidle -w \
-    timeout 300 'swaylock' \
-    timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-    timeout 600 'systemctl suspend' \
 
 ### Input configuration
 #
@@ -113,6 +115,18 @@ set $ws10 10
 #
 # Workspaces:
 #
+    # Set workspaces to specific monitor
+    # (Fermium only)
+    workspace $ws1 output DP-1
+    workspace $ws2 output DP-2
+    workspace $ws3 output DP-1
+    workspace $ws4 output DP-2
+    workspace $ws5 output DP-1
+    workspace $ws6 output DP-2
+    workspace $ws7 output DP-1
+    workspace $ws8 output DP-2
+    workspace $ws9 output DP-1
+    workspace $ws10 output DP-2
 	# Switch to workspace
 	bindsym $mod+1 workspace $ws1
 	bindsym $mod+2 workspace $ws2
@@ -173,6 +187,7 @@ set $ws10 10
 #
 # Miscellaneous keybinds
 #
+    bindsym $mod+Shift+w exec $scripts/wpmenu.sh
     bindsym $mod+Shift+c exec alacritty --class float-term -e clipboard
     bindsym $mod+Shift+s exec grim -g "$(slurp)" - | tee "$GRIM_DEFAULT_DIR/screenshot_$(date +%c).png" | wl-copy
     bindsym $mod+Shift+s+d exec alacritty --class float-term -e clipboard-delete
