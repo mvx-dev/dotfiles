@@ -1,0 +1,12 @@
+#!/bin/fish
+
+set choice $(cd "$WALLPAPER_DIR" && find . -type f -printf '%P\n' | rofi -dmenu -p "Select a wallpaper")
+if test -n "$choice";
+    notify-send -t 3000 "Wallpaper changed to $choice."
+
+    rm "$WALLPAPER_DIR/wallpaper.jpg"
+    ln -s "$WALLPAPER_DIR/$choice" "$WALLPAPER_DIR/wallpaper.jpg"
+
+    killall swaybg
+    swaybg -i "$WALLPAPER_DIR/$choice"
+end
