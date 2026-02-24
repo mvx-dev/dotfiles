@@ -23,8 +23,7 @@ set $scripts $HOME/.config/sway/scripts
 # Fermium Outputs
 output DP-1 scale 1.1
 output * bg ~/.assets/wallpapers/wallpaper.jpg fill
-output DP-1 pos 1600 0 res 2560x1440@144.006Hz
-output DP-2 pos 0 0 res 1600x900@59.978Hz
+output DP-1 pos 0 0 res 2560x1440@144.006Hz
 
 #
 # Idle/lock configuration
@@ -118,15 +117,15 @@ set $ws10 10
     # Set workspaces to specific monitor
     # (Fermium only)
     workspace $ws1 output DP-1
-    workspace $ws2 output DP-2
+    workspace $ws2 output DP-1
     workspace $ws3 output DP-1
-    workspace $ws4 output DP-2
+    workspace $ws4 output DP-1
     workspace $ws5 output DP-1
-    workspace $ws6 output DP-2
+    workspace $ws6 output DP-1
     workspace $ws7 output DP-1
-    workspace $ws8 output DP-2
+    workspace $ws8 output DP-1
     workspace $ws9 output DP-1
-    workspace $ws10 output DP-2
+    workspace $ws10 output DP-1
 	# Switch to workspace
 	bindsym $mod+1 workspace $ws1
 	bindsym $mod+2 workspace $ws2
