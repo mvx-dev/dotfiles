@@ -9,6 +9,7 @@ pyenv init - fish | source
 zoxide init --cmd cd fish | source
 
 set GPG_TTY $(tty)
+set WALLPAPER_DIR "$HOME/.assets/wallpapers"
 
 function y
     set tmp (mktemp -t "yazi-cwd.XXXXXX")

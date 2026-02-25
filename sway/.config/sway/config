@@ -186,7 +186,7 @@ set $ws10 10
 #
 # Miscellaneous keybinds
 #
-    bindsym $mod+Shift+w exec $scripts/wpmenu.sh
+    bindsym $mod+Shift+w exec $scripts/wpmenu
     bindsym $mod+Shift+c exec alacritty --class float-term -e clipboard
     bindsym $mod+Shift+s exec grim -g "$(slurp)" - | tee "$GRIM_DEFAULT_DIR/screenshot_$(date +%c).png" | wl-copy
     bindsym $mod+Shift+s+d exec alacritty --class float-term -e clipboard-delete
