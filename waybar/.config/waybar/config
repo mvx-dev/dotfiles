@@ -1,29 +1,21 @@
 [{
         "layer": "top",
-        "output": "DP-1",
         "include": [
             "~/.config/waybar/shared-modules.json"
         ],
         "position": "top",
         "modules-left": ["custom/notification","clock","custom/pacman","tray"],
-        "modules-center": ["sway/workspaces"],
+        "modules-center": ["ext/workspaces"],
         "modules-right": ["group/expand","bluetooth","network","battery"],
 
 
-        "sway/workspaces": {
+        "ext/workspaces": {
             "format": "{icon}",
             "format-icons": {
                 "active": "",
                 "default": "",
                 "empty": ""
             },
-            "persistent-workspaces": {
-                "1": [],
-                "3": [],
-                "5": [],
-                "7": [],
-                "9": []
-            }
         }
 },
 {
@@ -34,22 +26,15 @@
     ],
     "position": "top",
     "modules-left": ["custom/notification", "clock", "custom/pacman", "tray"],
-    "modules-center": ["sway/workspaces"],
+    "modules-center": ["ext/workspaces"],
     "modules-right": ["group/expand", "bluetooth", "network", "battery"],
 
-    "sway/workspaces": {
+    "ext/workspaces": {
         "format": "{icon}",
         "format-icons": {
             "active": "",
             "default": "",
             "empty": ""
         },
-        "persistent-workspaces": {
-            "2": [],
-            "4": [],
-            "6": [],
-            "8": [],
-            "10": []
-        }
     }
 }]
