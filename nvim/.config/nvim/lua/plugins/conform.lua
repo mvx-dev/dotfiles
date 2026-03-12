@@ -25,6 +25,7 @@ return {
             javascript = { "prettierd", "prettier", stop_after_first = true },
             c = { "clangd-format" },
             cpp = { "clangd-format" },
+            verilog = { "verible-verilog-format" }
         },
         -- Set default options
         default_format_opts = {

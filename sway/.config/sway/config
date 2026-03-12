@@ -21,10 +21,14 @@ set $scripts $HOME/.config/sway/scripts
 
 ### Output configuration
 # Fermium Outputs
-output DP-1 scale 1.1
+# output DP-1 scale 1.1
+# output * bg ~/.assets/wallpapers/wallpaper.jpg fill
+# output DP-1 pos 1600 0 res 2560x1440@144.006Hz
+# output DP-2 pos 0 0 res 1600x900@59.978Hz
+# Iridium Outputs
+output eDP-1 scale 1.75
+output DP-2 scale 1.75
 output * bg ~/.assets/wallpapers/wallpaper.jpg fill
-output DP-1 pos 1600 0 res 2560x1440@144.006Hz
-output DP-2 pos 0 0 res 1600x900@59.978Hz
 
 #
 # Idle/lock configuration
