@@ -4,37 +4,7 @@
             "~/.config/waybar/shared-modules.json"
         ],
         "position": "top",
-        "modules-left": ["custom/notification","clock","custom/pacman","tray"],
-        "modules-center": ["ext/workspaces"],
-        "modules-right": ["group/expand","bluetooth","network","battery"],
-
-
-        "ext/workspaces": {
-            "format": "{icon}",
-            "format-icons": {
-                "active": "",
-                "default": "",
-                "empty": ""
-            },
-        }
-},
-{
-    "layer": "top",
-    "output": "DP-2",
-    "include": [
-        "~/.config/waybar/shared-modules.json"
-    ],
-    "position": "top",
-    "modules-left": ["custom/notification", "clock", "custom/pacman", "tray"],
-    "modules-center": ["ext/workspaces"],
-    "modules-right": ["group/expand", "bluetooth", "network", "battery"],
-
-    "ext/workspaces": {
-        "format": "{icon}",
-        "format-icons": {
-            "active": "",
-            "default": "",
-            "empty": ""
-        },
-    }
+        "modules-left": ["clock", "custom/separator", "niri/window"],
+        "modules-center": ["mpris"],
+        "modules-right": ["custom/pacman", "custom/separator", "bluetooth", "custom/separator", "network"],
 }]
