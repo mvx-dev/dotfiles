@@ -21,6 +21,12 @@ vim.lsp.config["rust_analyzer"] = {
 	},
 }
 
+vim.lsp.config["verible"] = {
+	cmd = { "verible-verilog-ls" },
+	filetypes = { "verilog", "systemverilog" },
+	root_markers = { ".git", "verible.filelist" },
+}
+
 vim.lsp.enable({
 	"lua_ls",
 	"clangd",
@@ -33,6 +39,7 @@ vim.lsp.enable({
 	"vscode-css-languageserver",
 	"gopls",
 	"pyright",
+	"verible",
 })
 vim.cmd("set completeopt+=noselect")
 

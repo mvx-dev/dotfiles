@@ -15,6 +15,8 @@ require("conform").setup({
 		python = { "ruff", stop_after_first = true },
 		css = { "css_beautify" },
 		toml = { "taplo" },
+		verilog = { "verible-verilog-format" },
+		json = { "jq" },
 	},
 	format_on_save = {
 		timeout_ms = 500,
