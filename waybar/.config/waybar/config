@@ -6,5 +6,5 @@
         "position": "top",
         "modules-left": ["clock", "custom/separator", "niri/window"],
         "modules-center": ["mpris"],
-        "modules-right": ["custom/pacman", "custom/separator", "bluetooth", "custom/separator", "network"],
+        "modules-right": ["custom/pacman", "custom/separator", "bluetooth", "custom/separator", "network", "custom/separator", "battery"],
 }]
