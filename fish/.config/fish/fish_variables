@@ -1,7 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR --export DOTFILE_DIR:/home/cheshire/code/dotfiles
-SETUVAR --export GPG_TTY:/dev/pts/3
+SETUVAR --export GPG_TTY:/dev/pts/1
 SETUVAR --path LD_LIBRARY_PATH:/home/cheshire/Applications/vulkan/1\x2e4\x2e321\x2e1/lib
 SETUVAR PYENV_ROOT:/home/cheshire/\x2epyenv
 SETUVAR RUST_LOG:debug
