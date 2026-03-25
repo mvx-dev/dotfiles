@@ -12,7 +12,7 @@ require("conform").setup({
 		cpp = { "clang-format" },
 		go = { "gopls" },
 		rust = { "rustfmt" },
-		python = { "ruff", stop_after_first = true },
+		python = { "autopep8", stop_after_first = true },
 		css = { "css_beautify" },
 		toml = { "taplo" },
 		verilog = { "verible-verilog-format" },
