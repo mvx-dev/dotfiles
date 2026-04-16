@@ -29,7 +29,7 @@ Also remember to enable the `wheel` sudo group
 #### Networking
 Add the user to the `network` group
 ```bash
-# usermod -aG {user} network
+sudo usermod -aG {user} network
 ```
 On my PC, ASPM (Active State Power Management) must be disabled for the AX210 (wifi card). This is done in BIOS
 
