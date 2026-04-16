@@ -50,6 +50,37 @@ org.freedesktop.impl.portal.FileChooser = kde
 
 This will use the `hyprland` desktop portal wherever possible, fallback to `kde`, and use `dolphin` for file choosing.
 
+#### Git/Github Setup
+Ensure git is setup correctly (`user.name` and `user.email` set), and the following packages are installed:
+
+- `github-cli`
+- `gpg`
+- `pass`
+
+Once this is done, generate a new GnuPG key with
+```bash
+gpg --generate-key
+```
+and follow the prompts. Then, retrieve the id of the key with
+```bash
+gpg --list-secret-keys --keyid-format=long
+```
+The id of the key is in the line `sec ed25519/1234567890ABCDEF 2026-04-16`. In this case, the id is `1234567890ABCDEF`.
+Then, initialise `pass` with this key
+```bash
+pass init [key]
+```
+The password store is now configured. Git can be told to use this store with
+```bash
+git config --global credential.credentialStore gpg
+```
+The OAuth token from Github can be configured by running
+```bash
+gh auth login
+```
+and following the prompts.
+Note that the blame will only be the Github account if `user.name` and `user.email` matches the account.
+
 #### Steam
 To install steam, enable 32-bit packages in `/etc/pacman.conf`. For Arch, this is `multilib`, and for Artix this is `lib32`.
 Once this is done, ensure the following packages are installed
