@@ -17,3 +17,52 @@ and can be regenerated with
 paru -S --needed < aur_packages.txt
 ```
 Later I will make a script that automatically does this, and I may even separate everything into pacman groups.
+
+### Additional Steps
+#### Sudo
+Configure sudo to persist across terminals by adding the below to `/etc/sudoers`
+```bash
+Defaults timestamp_type=global
+```
+Also remember to enable the `wheel` sudo group
+
+#### Networking
+Add the user to the `network` group
+```bash
+# usermod -aG {user} network
+```
+On my PC, ASPM (Active State Power Management) must be disabled for the AX210 (wifi card). This is done in BIOS
+
+#### xdg-desktop-portal
+Ensure the following packages are installed
+
+- `xdg-desktop-portal-impl`
+- `xdg-desktop-portal-hyprland`
+- `xdk-desktop-portal-kde`
+
+Then in `~/.config/xdg-desktop-portal/portals.conf` add the following lines
+
+```toml
+[preferred]
+default=hyprland;kde
+org.freedesktop.impl.portal.FileChooser = kde
+```
+
+This will use the `hyprland` desktop portal wherever possible, fallback to `kde`, and use `dolphin` for file choosing.
+
+#### Steam
+To install steam, enable 32-bit packages in `/etc/pacman.conf`. For Arch, this is `multilib`, and for Artix this is `lib32`.
+Once this is done, ensure the following packages are installed
+
+- `vulkan-radeon`
+- `lib32-vulkan-radeon`
+- Some `xdg-desktop-portal` implementation (see [#xdg-desktop-portal])
+
+The `steam` package can now be installed.
+When adding a library, ensure permission are set correctly, and `ntfs` drives are begin mounted as `ntfs`. For example
+
+```
+UUID=xxxxxxxxxxxxxxxx /SharedDrive ntfs3 rw,relatime,uid=1000,gid=1000,acl,iocharset=utf8,prealloc 0 0
+```
+
+This have been mounted as `ntfs3`, and it is owned by `uid` 1000 (the first user created after `root`).
