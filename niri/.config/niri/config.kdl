@@ -281,7 +281,6 @@ layout {
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-at-startup "waybar"
 spawn-sh-at-startup "swaybg -i $HOME/.assets/wallpapers/wallpaper.jpg"
-spawn-sh-at-startup "systemctl --user start hyprpolkitagent"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
@@ -339,6 +338,12 @@ window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     match title="^Bitwarden$"
     open-floating true
+}
+
+window-rule {
+    match app-id=r#"firefox$"#
+    match app-id="kitty" title="termusic-player"
+    open-maximized true
 }
 
 // Example: block out two password managers from screen capture.
