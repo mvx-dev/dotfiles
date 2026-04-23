@@ -384,7 +384,7 @@ binds {
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+D hotkey-overlay-title="Run an Application: rofi" { spawn-sh "rofi -show drun"; }
-    Mod+B hotkey-overlay-title="Open a Browswer: firefix" {spawn "firefox";}
+    Mod+B hotkey-overlay-title="Open a Browswer: zen-browser" {spawn "zen-browser";}
     Super+Alt+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
     Mod+Shift+W hotkey-overlay-title="Wallpaper switcher" { spawn "~/.config/niri/wpmenu"; }
 
