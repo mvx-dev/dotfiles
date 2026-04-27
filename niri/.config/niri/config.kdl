@@ -390,6 +390,7 @@ binds {
     Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+D hotkey-overlay-title="Run an Application: rofi" { spawn-sh "rofi -show drun"; }
     Mod+B hotkey-overlay-title="Open a Browswer: zen-browser" {spawn "zen-browser";}
+    Mod+Alt+Space hotkey-overlay-title="Open a File Manager: yazi" {spawn-sh "yazi";}
     Super+Alt+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
     Mod+Shift+W hotkey-overlay-title="Wallpaper switcher" { spawn "~/.config/niri/wpmenu"; }
 

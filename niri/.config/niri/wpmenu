@@ -9,5 +9,5 @@ if test -n "$choice"
     ln -s "$WALLPAPER_DIR/$choice" "$WALLPAPER_DIR/wallpaper.jpg"
 
     killall swaybg
-    swaybg -i "$WALLPAPER_DIR/$choice" & disown
+    swaybg -m fill -i "$WALLPAPER_DIR/$choice" & disown
 end
