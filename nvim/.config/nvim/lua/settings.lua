@@ -14,7 +14,7 @@ vim.opt.tabstop = 4
 
 -- wrapping
 vim.opt.shiftround = true
-vim.opt.wrap = false
+vim.opt.wrap = true
 vim.opt.signcolumn = 'yes'
 vim.opt.winborder = 'rounded'
 
@@ -22,6 +22,8 @@ vim.opt.winborder = 'rounded'
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.ruler = true
+
+vim.opt.colorcolumn = "80"
 
 -- fold settings
 

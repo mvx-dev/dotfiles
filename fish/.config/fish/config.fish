@@ -5,6 +5,7 @@ set fish_greeting
 
 alias ls "eza -alo --git --group-directories-first"
 alias nv "bob run nightly"
+alias open "handlr open"
 pyenv init - fish | source
 zoxide init --cmd cd fish | source
 
