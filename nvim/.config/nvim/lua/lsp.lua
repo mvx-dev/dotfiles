@@ -40,6 +40,7 @@ vim.lsp.enable({
 	"gopls",
 	"pyright",
 	"verible",
+    "texlab",
 })
 vim.cmd("set completeopt+=noselect")
 
