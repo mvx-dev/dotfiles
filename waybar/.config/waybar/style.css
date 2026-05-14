@@ -1,67 +1,42 @@
 /* All module configuration */
-@import url('../../.cache/wal/colors-waybar.css');
+@import url("../../.cache/wal/colors-waybar.css");
 
 * {
-    font-size: 17px;
-    font-family: "Iosevka Nerd Font Propo";
+  font-size: 17px;
+  font-family: "Iosevka Nerd Font Propo";
 }
 
 window#waybar {
-    all: unset;
+  all: unset;
+  border-style: solid;
+  border-width: 0px 0px 2px 0px;
+  border-color: @active;
+  background: alpha(@background, 0.8);
+  margin: 2px;
 }
 
-.modules-left {
-    padding: 7px;
-    border-style: solid;
-    border-width: 0px 2px 2px 0px;
-    border-color: @active;
-    background: alpha(@background, 0.8);
-}
-
-.modules-center {
-    padding: 7px;
-    border-style: solid;
-    border-width: 0px 2px 2px 2px;
-    border-color: @active;
-    background: alpha(@background, 0.8);
-}
-
-.modules-right {
-    padding: 7px;
-    border-style: solid;
-    border-width: 0px 0px 2px 2px;
-    border-color: @active;
-    background: alpha(@background, 0.8);
+.module {
+  padding: 2px 5px;
 }
 
 /* Single module styling */
 #mpris.disconnected {
-    background-color: #ffffff;
-    /* color: #ffffff; */
-    /* padding: 0px 0px 0px 0px; */
+  background-color: #ffffff;
 }
 
 #bluetooth {
-    padding: 0px 5px;
+  padding: 0px 5px;
 }
 
 #custom-separator {
-    border-right: 2px solid @inactive;
-    margin: 0px 5px;
+  border-right: 2px solid @inactive;
+  margin: 0px 5px;
 }
 
 #custom-pacman {
-    padding: 0px 5px;
-}
-
-#clock {
-    /* padding: 0px 5px; */
+  padding: 0px 5px;
 }
 
 #network {
-    padding: 0px 5px;
-}
-
-#niri-window {
-    /* margin: 0px 5px; */
+  padding: 0px 5px;
 }

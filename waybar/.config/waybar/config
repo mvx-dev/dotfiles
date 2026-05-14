@@ -4,7 +4,7 @@
             "~/.config/waybar/shared-modules.json"
         ],
         "position": "top",
-        "modules-left": ["clock", "custom/separator", "niri/window"],
+        "modules-left": ["clock", "tray"],
         "modules-center": ["mpris"],
-        "modules-right": ["custom/pacman", "custom/separator", "bluetooth", "custom/separator", "network", "custom/separator", "battery"],
+        "modules-right": ["custom/pacman", "bluetooth", "network", "battery"]
 }]
