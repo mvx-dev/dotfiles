@@ -39,8 +39,9 @@ vim.lsp.enable({
 	"vscode-css-languageserver",
 	"gopls",
 	"pyright",
+	"ruff",
 	"verible",
-    "texlab",
+	"texlab",
 })
 vim.cmd("set completeopt+=noselect")
 
