@@ -61,3 +61,9 @@ vim.diagnostic.config({
 -- spell checker
 vim.opt.spell = true
 vim.opt.spelllang = "en_au"
+
+-- python provider (install python-pynvim)
+vim.g.python3_host_prog = "/usr/bin/python3"
+
+-- UltiSnips
+vim.g.UltiSnipsSnippetDirectories = { vim.fn.expand("$HOME/.config/nvim/UltiSnips") }
