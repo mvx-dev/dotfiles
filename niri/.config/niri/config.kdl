@@ -1,8 +1,4 @@
-// This config is in the KDL format: https://kdl.dev
-// "/-" comments out the following node.
-// Check the wiki for a full description of the configuration:
-// https://yalter.github.io/niri/Configuration:-Introduction
-
+include "output.kdl"
 // Input device configuration.
 // Find the full list of options on the wiki:
 // https://yalter.github.io/niri/Configuration:-Input
@@ -68,53 +64,6 @@ input {
     // Focus windows and outputs automatically when moving the mouse into them.
     // Setting max-scroll-amount="0%" makes it work only on windows already fully on screen.
     // focus-follows-mouse max-scroll-amount="0%"
-}
-
-// You can configure outputs by their name, which you can find
-// by running `niri msg outputs` while inside a niri instance.
-// The built-in laptop monitor is usually called "eDP-1".
-// Find more information on the wiki:
-// https://yalter.github.io/niri/Configuration:-Outputs
-// Remember to uncomment the node by removing "/-"!
-output "DP-1" {
-    // Uncomment this line to disable this output.
-    // off
-
-    // Resolution and, optionally, refresh rate of the output.
-    // The format is "<width>x<height>" or "<width>x<height>@<refresh rate>".
-    // If the refresh rate is omitted, niri will pick the highest refresh rate
-    // for the resolution.
-    // If the mode is omitted altogether or is invalid, niri will pick one automatically.
-    // Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
-    mode "2560x1440@144.006"
-
-    // You can use integer or fractional scale, for example use 1.5 for 150% scale.
-    scale 1.2
-
-    // Transform allows to rotate the output counter-clockwise, valid values are:
-    // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
-    transform "normal"
-
-    // Position of the output in the global coordinate space.
-    // This affects directional monitor actions like "focus-monitor-left", and cursor movement.
-    // The cursor can only move between directly adjacent outputs.
-    // Output scale and rotation has to be taken into account for positioning:
-    // outputs are sized in logical, or scaled, pixels.
-    // For example, a 3840×2160 output with scale 2.0 will have a logical size of 1920×1080,
-    // so to put another output directly adjacent to it on the right, set its x to 1920.
-    // If the position is unset or results in an overlap, the output is instead placed
-    // automatically.
-    position x=2194 y=0
-}
-
-output "HDMI-A-1" {
-    mode "3840x2160@60.000"
-
-    position x=0 y=0
-
-    focus-at-startup
-
-    scale 1.75
 }
 
 // Settings that influence how windows are positioned and sized.
@@ -208,7 +157,7 @@ layout {
         // If you enable the border, you probably want to disable the focus ring.
         // off
 
-        width 2
+        width 1
         active-color "#cba6f7"
         inactive-color "#505050"
 
@@ -281,6 +230,7 @@ layout {
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-at-startup "waybar"
 spawn-sh-at-startup "swaybg -i $HOME/.assets/wallpapers/wallpaper.jpg"
+spawn-sh-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
@@ -393,7 +343,7 @@ binds {
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
-    Mod+D hotkey-overlay-title="Run an Application: rofi" { spawn-sh "rofi -show drun"; }
+    Mod+Space hotkey-overlay-title="Run an Application: rofi" { spawn-sh "rofi -show drun"; }
     Mod+B hotkey-overlay-title="Open a Browswer: zen-browser" {spawn "zen-browser";}
     Mod+Alt+Space hotkey-overlay-title="Open a File Manager: yazi" {spawn-sh "kitty yazi";}
     Super+Alt+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
