@@ -38,7 +38,8 @@
     },
     "clock": {
         "format": "{:%a %d/%m/%Y %H:%M:%S}",
-        "interval": 1
+        "interval": 1,
+        "tooltip": false
     },
     "mpris": {
         "format": "{dynamic}",
@@ -59,15 +60,24 @@
         "format": "{app_id}"
     },
     "custom/pacman": {
-        "format": "󰅢 {}",
+        "exec": "~/.config/waybar/updates.sh",
+        "return-type": "json",
         "interval": 300,
-        "exec": "checkupdates | wc -l",
-        "exec-if": "exit 0",
-        "signal": 8,
-        "tooltip": false
+        "tooltip": true
     },
     "tray": {
         "icon-size": 16,
         "spacing": 2
+    },
+    "wireplumber": {
+        "format": "{icon}",
+        "format-muted": "",
+        "format-icons": [
+            "",
+            "",
+            ""
+        ],
+        "on-click": "pwvucontrol",
+        "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
     }
 }

@@ -1,7 +1,7 @@
-require('settings')
-require('binds')
-require('plugins')
-require('lsp')
-require('statusline')
+require("settings")
+require("binds")
+require("plugins")
+require("lsp")
+require("statusline")
 
-vim.cmd[[colorscheme catppuccin]]
+vim.cmd([[colorscheme catppuccin]])

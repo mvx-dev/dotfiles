@@ -1,0 +1,28 @@
+// iridium screen
+output "eDP-1" {
+    mode "2256x1504@59.999"
+    scale 1.5
+    position x=0 y=0
+    focus-at-startup
+}
+
+// fermium screen (4K)
+output "HDMI-A-1" {
+    mode "3840x2160@60.000"
+    position x=0 y=0
+    scale 1.75
+}
+
+// fermium screen (2K)
+output "DP-1" {
+    mode "2560x1440@133.006"
+    scale 1.2
+    position x=2194 y=0
+}
+
+// bluesat screen (4K)
+output "DP-3" {
+    mode "3840x2160@59.997"
+    scale 1.5
+    position x=1504 y=0
+}

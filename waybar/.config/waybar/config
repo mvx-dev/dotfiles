@@ -6,5 +6,5 @@
         "position": "top",
         "modules-left": ["clock", "tray"],
         "modules-center": ["mpris"],
-        "modules-right": ["custom/pacman", "bluetooth", "network", "battery"]
+        "modules-right": ["wireplumber", "custom/pacman", "bluetooth", "network", "battery"]
 }]

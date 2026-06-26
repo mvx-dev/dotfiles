@@ -97,3 +97,9 @@ UUID=xxxxxxxxxxxxxxxx /SharedDrive ntfs3 rw,relatime,uid=1000,gid=1000,acl,iocha
 ```
 
 This have been mounted as `ntfs3`, and it is owned by `uid` 1000 (the first user created after `root`).
+
+#### Theming
+For Gnome, run
+```bash
+dconf write /org/gnome/desktop/interface/color-scheme "'prefer-dark'"
+```
