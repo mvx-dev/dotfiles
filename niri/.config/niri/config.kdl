@@ -290,6 +290,12 @@ window-rule {
     open-floating true
 }
 
+// polkit agent
+window-rule {
+    match app-id="Pinentry-gtk"
+    open-floating true
+}
+
 window-rule {
     match app-id=r#"firefox$"#
     match app-id="kitty" title="termusic-player"
