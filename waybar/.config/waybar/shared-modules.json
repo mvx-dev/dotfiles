@@ -59,12 +59,10 @@
         "format": "{app_id}"
     },
     "custom/pacman": {
-        "format": "󰅢 {}",
+        "exec": "~/.config/waybar/updates.sh",
+        "return-type": "json",
         "interval": 300,
-        "exec": "checkupdates | wc -l",
-        "exec-if": "exit 0",
-        "signal": 8,
-        "tooltip": false
+        "tooltip": true
     },
     "tray": {
         "icon-size": 16,
