@@ -1,6 +1,11 @@
 include "output.kdl"
 include "window-rules.kdl"
 
+environment {
+    QT_QPA_PLATFORMTHEME "qt6ct"
+    QT_QPA_PLATFORMTHEME_QT6 "qt6ct"
+}
+
 input {
     keyboard {
         xkb {
