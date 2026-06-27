@@ -6,3 +6,25 @@ snippet docls "Document Class" bA
 \documentclass{$1}$0
 endsnippet
 
+snippet texdoc "LaTeX Biolerplate" b
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage[margin=1in]{geometry}
+\usepackage{float}
+
+\title{${1:Title}}
+\author{${2:Author}}
+\date{${3:`date +%B\ %Y`}}
+
+\begin{document}
+
+\maketitle
+
+$0
+
+\end{document}
+endsnippet
