@@ -30,6 +30,13 @@ endsnippet
 
 snippet def "Definition" bi
 \begin{definition}[$1]
+	\label{def:`!p
+import re
+title = t[1].strip()
+label = re.sub(r'[^A-Za-z0-9 ]+', '', title)
+label = re.sub(r' +', '-', label).lower()
+snip.rv = label
+	`}
 	${0:${VISUAL}}
 \end{definition}
 endsnippet

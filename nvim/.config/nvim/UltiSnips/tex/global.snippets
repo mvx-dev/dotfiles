@@ -25,4 +25,10 @@ def add_row(snip):
 	final_str += " & ".join(['$' + str(j + 1) for j in range(row_len)])
 	final_str += " \\\\\\"
 	snip.expand_anon(final_str)
+
+def math():
+	return vim.eval('vimtex#syntex#in_mathzone()') == '1'
+
+def text():
+	return vim.eval('vimtex#syntex#in_mathzone()') == '0'
 endglobal
