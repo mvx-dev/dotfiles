@@ -1,0 +1,61 @@
+# Calculus — math only
+global !p
+from globals import *
+endglobal
+
+priority 300
+
+# Manual
+snippet iint "\iint" wm
+\iint
+endsnippet
+
+snippet iiint "\iiint" wm
+\iiint
+endsnippet
+
+snippet oint "\oint" wm
+\oint
+endsnippet
+
+snippet sum "\sum_{i=1}^{n}" wm
+\sum_{${1:i=1}}^{${2:n}} $0
+endsnippet
+
+snippet prod "\prod_{i=1}^{n}" wm
+\prod_{${1:i=1}}^{${2:n}} $0
+endsnippet
+
+snippet lim "\lim_{x\to\infty}" wm
+\lim_{${1:x}\to${2:\infty}} $0
+endsnippet
+
+snippet ff "\frac{}{}" wmA
+\frac{$1}{$2}$0
+endsnippet
+
+# Automatic
+context "math()"
+snippet sr "\sqrt{}" iAm
+\sqrt{$1}$0
+endsnippet
+
+context "math()"
+snippet nrt "\sqrt[n]{}" iAm
+\sqrt[${1:n}]{$2}$0
+endsnippet
+
+context "math()"
+snippet ii "\int" wAm
+\int
+endsnippet
+
+context "math()"
+snippet bnt "\int_{a}^{b}" wmA
+\int_{${1:a}}^{${2:b}} $0
+endsnippet
+
+context "math()"
+snippet hh "hat" iAm
+\hat{$1}$0
+endsnippet

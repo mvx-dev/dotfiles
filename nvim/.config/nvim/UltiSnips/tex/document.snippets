@@ -1,0 +1,76 @@
+# Document Structure — text mode, manual
+global !p
+from globals import *
+endglobal
+
+
+snippet sec "\section{}" w
+\section{$1}
+$0
+endsnippet
+
+snippet ssec "\subsection{}" w
+\subsection{$1}
+$0
+endsnippet
+
+snippet sssec "\subsubsection{}" w
+\subsubsection{$1}
+$0
+endsnippet
+
+snippet chap "\chapter{}" w
+\chapter{$1}
+$0
+endsnippet
+
+snippet part "\part{}" w
+\part{$1}
+$0
+endsnippet
+
+snippet item "\item" w
+\item $0
+endsnippet
+
+snippet doc "document skeleton" w
+\documentclass[${1:12pt}]{${2:article}}
+
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{physics}
+\usepackage{siunitx}
+
+\title{$3}
+\author{$4}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+$0
+
+\end{document}
+endsnippet
+
+snippet fig "figure" w
+\begin{figure}[${1:htbp}]
+	\centering
+	\includegraphics[width=${2:0.8}\linewidth]{$3}
+	\caption{$4}
+	\label{fig:$5}
+\end{figure}$0
+endsnippet
+
+snippet table "table" w
+\begin{table}[${1:htbp}]
+	\centering
+	\caption{$2}
+	\label{tab:$3}
+	\begin{tabular}{$4}
+		\hline
+		$0
+		\hline
+	\end{tabular}
+\end{table}
+endsnippet

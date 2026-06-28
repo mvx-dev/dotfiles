@@ -1,0 +1,18 @@
+# SI Units — math only, manual
+# Requires: \usepackage{siunitx}
+global !p
+from globals import *
+endglobal
+
+
+snippet si "\SI{}{}" wm
+\SI{$1}{$2}$0
+endsnippet
+
+snippet unit "\unit{}" wm
+\unit{$1}$0
+endsnippet
+
+snippet ang "\ang{}" wm
+\ang{$1}$0
+endsnippet

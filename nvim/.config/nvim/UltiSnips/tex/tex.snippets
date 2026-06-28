@@ -1,0 +1,8 @@
+# tex.snippets — global context function for vimtex math detection
+# This file must be named tex.snippets and sit alongside the others.
+# All math-mode snippets use context "math()" which calls this function.
+
+global !p
+def math():
+    return vim.eval('vimtex#syntax#in_mathzone()') == '1'
+endglobal

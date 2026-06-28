@@ -7,7 +7,12 @@ vim.pack.add({
 
 require("blink.cmp").setup({
 	keymap = { preset = "super-tab" },
-	completion = { documentation = { auto_show = false } },
+	completion = { documentation = { auto_show = false }, menu = {
+        auto_show = function()
+            return vim.bo.filetype ~= "tex"
+        end,
+        }
+    },
 	sources = {
 		default = { "lsp", "path", "snippets", "buffer" },
 	},

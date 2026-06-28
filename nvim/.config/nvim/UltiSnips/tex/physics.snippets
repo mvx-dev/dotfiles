@@ -1,0 +1,41 @@
+# Physics (Dirac notation etc.) — math only, manual
+# Requires: \usepackage{physics} or manual definitions
+global !p
+from globals import *
+endglobal
+
+
+context "math()"
+snippet ket "\ket{}" wm
+\ket{$1}$0
+endsnippet
+
+context "math()"
+snippet bra "\bra{}" wm
+\bra{$1}$0
+endsnippet
+
+context "math()"
+snippet braket "\braket{}{}" wm
+\braket{$1}{$2}$0
+endsnippet
+
+context "math()"
+snippet ev "\ev{}{}" wm
+\ev{$1}{$2}$0
+endsnippet
+
+context "math()"
+snippet comm "\comm{}{}" wm
+\comm{$1}{$2}$0
+endsnippet
+
+context "math()"
+snippet acomm "\acomm{}{}" wm
+\acomm{$1}{$2}$0
+endsnippet
+
+context "math()"
+snippet rr "script r" iAm
+\scriptr
+endsnippet

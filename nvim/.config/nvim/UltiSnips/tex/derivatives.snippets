@@ -1,0 +1,39 @@
+# Derivatives — math only
+global !p
+from globals import *
+endglobal
+
+
+# Manual
+snippet dd "\frac{d}{dx}" wm
+\frac{d}{dx}$0
+endsnippet
+
+snippet ddi "\frac{d}{d<var>}" wm
+\frac{d}{d${1:x}}$0
+endsnippet
+
+snippet pd "\frac{\partial}{\partial x}" wm
+\frac{\partial}{\partial ${1:x}}$0
+endsnippet
+
+snippet pp "\frac{\partial^2}{\partial x^2}" wm
+\frac{\partial^2}{\partial ${1:x}^2}$0
+endsnippet
+
+# Automatic
+snippet grad "\nabla" iAm
+\nabla
+endsnippet
+
+snippet div "\nabla\cdot" iAm
+\nabla\cdot
+endsnippet
+
+snippet curl "\nabla\times" iAm
+\nabla\times
+endsnippet
+
+snippet lap "\nabla^2" iAm
+\nabla^2
+endsnippet

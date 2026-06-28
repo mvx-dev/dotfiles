@@ -1,0 +1,36 @@
+# Accents — math only, regex automatic
+global !p
+from globals import *
+endglobal
+
+priority 10
+
+context "math()"
+snippet "([A-Za-z])hat" "\hat{x}" riAm
+\hat{`!p snip.rv = match.group(1)`}
+endsnippet
+
+context "math()"
+snippet "([A-Za-z])bar" "\bar{x}" riAm
+\bar{`!p snip.rv = match.group(1)`}
+endsnippet
+
+context "math()"
+snippet "([A-Za-z])vec" "\vec{x}" riAm
+\vec{`!p snip.rv = match.group(1)`}
+endsnippet
+
+context "math()"
+snippet "([A-Za-z])dot" "\dot{x}" riAm
+\dot{`!p snip.rv = match.group(1)`}
+endsnippet
+
+context "math()"
+snippet "([A-Za-z])ddot" "\ddot{x}" riAm
+\ddot{`!p snip.rv = match.group(1)`}
+endsnippet
+
+context "math()"
+snippet "([A-Za-z])til" "\tilde{x}" riAm
+\tilde{`!p snip.rv = match.group(1)`}
+endsnippet
