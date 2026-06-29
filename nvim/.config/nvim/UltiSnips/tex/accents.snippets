@@ -34,3 +34,8 @@ context "math()"
 snippet "([A-Za-z])til" "\tilde{x}" riAm
 \tilde{`!p snip.rv = match.group(1)`}
 endsnippet
+
+context "math()"
+snippet vv "\vec{}" iAm
+\vec{$1}$0
+endsnippet
