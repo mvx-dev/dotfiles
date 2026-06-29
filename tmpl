@@ -1,0 +1,30 @@
+#!/usr/bin/env fish
+
+if test (count $argv) -ne 1
+    echo "Usage: tmpl <template-name>" >&2
+    exit 1
+end
+
+set -l template_root "$HOME/code/dotfiles/templates"
+set -l template_name $argv[1]
+set -l source_dir "$template_root/$template_name"
+
+if not test -d "$source_dir"
+    echo "tmpl: template directory not found: $source_dir" >&2
+    exit 1
+end
+
+for item in (find "$source_dir" -mindepth 1 -print)
+    set -l rel (string replace -r "^$source_dir/?" "" -- "$item")
+
+    if test -d "$item"
+        mkdir -p "$PWD/$rel"
+    else
+        set -l dir (dirname "$rel")
+        set -l base (basename "$rel")
+        set -l newbase "$base"
+
+        mkdir -p "$PWD/$dir"
+        cp "$item" "$PWD/$dir/$newbase"
+    end
+end
