@@ -23,9 +23,9 @@ snippet eq "equation" w
 endsnippet
 
 snippet ali "align" w
-\begin{align}
+\begin{align*}
 	$1 &= $2 \\\\
-\end{align}$0
+\end{align*}$0
 endsnippet
 
 snippet gat "gather" w
@@ -97,4 +97,10 @@ snippet proof "proof" w
 \begin{proof}
 	$1
 \end{proof}$0
+endsnippet
+
+snippet cal "LaTeX callout" b
+\begin{callout}{${1:info}}[${2:${1/^(.)/\u$1/}}]
+$0
+\end{callout}
 endsnippet

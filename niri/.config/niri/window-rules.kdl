@@ -36,3 +36,8 @@ window-rule {
 
     block-out-from "screen-capture"
 }
+
+window-rule {
+    match app-id="floating"
+    open-floating true
+}
