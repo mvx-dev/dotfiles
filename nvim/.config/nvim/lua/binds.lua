@@ -32,3 +32,6 @@ vim.keymap.set("n", "grq", ":Format<CR>")
 vim.g.UltiSnipsExpandTrigger = "<C-j>"
 vim.g.UltiSnipsJumpForwardTrigger = "<Tab>"
 vim.g.UltiSnipsJumpBackwardTrigger = "<S-Tab>"
+
+-- Typewriter
+vim.keymap.set("n", "<leader>tw", "<cmd>TWToggle<CR>")
