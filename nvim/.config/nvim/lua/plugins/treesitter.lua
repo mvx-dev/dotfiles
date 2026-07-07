@@ -16,6 +16,7 @@ require("nvim-treesitter.config").setup({
 		"yaml",
 		"markdown",
 		"gitignore",
+		"latex",
 	},
 	auto_install = true,
 	highlight = {
