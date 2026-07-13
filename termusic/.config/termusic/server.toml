@@ -9,7 +9,7 @@ address = "::1"
 [player]
 music_dirs = ["/home/cheshire/Music"]
 loop_mode = "playlist"
-volume = 60
+volume = 75
 speed = 10
 gapless = true
 use_mediacontrols = true
