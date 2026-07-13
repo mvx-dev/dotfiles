@@ -10,4 +10,4 @@ nvim/.config/nvim/nvim-pack-lock.json
 fish/.config/fish/fish_variables
 
 # python
-*/__pycache__/
+__pycache__/
