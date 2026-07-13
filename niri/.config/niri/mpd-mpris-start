@@ -1,0 +1,20 @@
+#!/usr/bin/env fish
+
+if not pgrep -x mpd >/dev/null
+    mpd
+end
+
+set -l tries 30
+while test $tries -gt 0
+    if nc -z 127.0.0.1 6600 >/dev/null 2>&1
+        break
+    end
+    sleep 1
+    set tries (math $tries - 1)
+end
+
+if test $tries -gt 0
+    if not pgrep -x mpd-mpris >/dev/null
+        mpd-mpris -no-instance &
+    end
+end
