@@ -103,3 +103,18 @@ For Gnome, run
 ```bash
 dconf write /org/gnome/desktop/interface/color-scheme "'prefer-dark'"
 ```
+
+#### LaTeX
+Ensure the following packages are installed (these will be added to the package list once I clean that up).
+- texlive-basic
+- texlive-binextra
+- texlive-bibtexextra
+- texlive-mathscience
+- texlive-latexrecommended
+- texlive-fontsrecommended
+- texlive-fontsextra
+Then to ensure the LaTeX database is up to date, run
+```bash
+sudo mktexlsr
+sudo fmtutil-sys --all
+```
