@@ -21,6 +21,7 @@ window-rule {
 window-rule {
     match app-id=r#"firefox$"#
     match app-id="kitty" title="termusic-player"
+    match app-id="kitty" title="rmpc-player"
     open-maximized true
 }
 
