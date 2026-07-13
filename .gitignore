@@ -1,7 +1,13 @@
+# meta
 git/
 .stow-local-ignore
 
+# lock files
 nvim/.config/nvim/lazy-lock.json
 nvim/.config/nvim/nvim-pack-lock.json
 
+# local variables
 fish/.config/fish/fish_variables
+
+# python
+*/__pycache__/
