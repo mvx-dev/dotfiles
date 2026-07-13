@@ -42,6 +42,7 @@ vim.lsp.enable({
 	"ruff",
 	"verible",
 	"texlab",
+    "taplo"
 })
 vim.cmd("set completeopt+=noselect")
 
