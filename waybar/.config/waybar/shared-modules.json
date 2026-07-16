@@ -62,7 +62,7 @@
     "custom/pacman": {
         "exec": "~/.config/waybar/updates.sh",
         "return-type": "json",
-        "interval": 300,
+        "interval": 1800,
         "tooltip": true
     },
     "tray": {
