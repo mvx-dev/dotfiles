@@ -113,6 +113,7 @@ Ensure the following packages are installed (these will be added to the package 
 - texlive-latexrecommended
 - texlive-fontsrecommended
 - texlive-fontsextra
+- texlive-latexextra
 Then to ensure the LaTeX database is up to date, run
 ```bash
 sudo mktexlsr
