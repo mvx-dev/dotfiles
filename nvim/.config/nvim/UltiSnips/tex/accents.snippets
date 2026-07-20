@@ -21,7 +21,7 @@ snippet "([A-Za-z])vec" "\vec{x}" riAm
 endsnippet
 
 context "math()"
-snippet "([A-Za-z])dot" "\dot{x}" riAm
+snippet "([A-CE-Za-ce-z])dot" "\dot{x}" riAm
 \dot{`!p snip.rv = match.group(1)`}
 endsnippet
 
@@ -41,6 +41,6 @@ snippet vv "\vec{}" iAm
 endsnippet
 
 context "math()"
-snippet dd "\dot{}" iAm
+snippet do "\dot{}" wAm
 \dot{$1}$0
 endsnippet
