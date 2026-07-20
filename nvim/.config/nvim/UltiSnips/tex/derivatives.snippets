@@ -9,12 +9,13 @@ snippet dd "\frac{d}{dx}" wm
 \frac{d}{dx}$0
 endsnippet
 
-snippet ddi "\frac{d}{d<var>}" wm
+context "math()"
+snippet ddi "\frac{d}{d<var>}" wmA
 \frac{d}{d${1:x}}$0
 endsnippet
 
 snippet pd "\frac{\partial}{\partial x}" wm
-\frac{\partial}{\partial ${1:x}}$0
+\frac{\partial $1}{\partial ${2:x}}$0
 endsnippet
 
 snippet pp "\frac{\partial^2}{\partial x^2}" wm
