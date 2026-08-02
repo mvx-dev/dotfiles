@@ -59,6 +59,10 @@
 \definecolor{ctpSurface0}{HTML}{313244}
 \definecolor{ctpBase}{HTML}{1E1E2E}
 
+% Callout reference counter (must be before definition)
+\newcounter{callout}[subsection]
+\renewcommand{\thecallout}{\thesection.\arabic{callout}}
+
 % NOTE: type keys are matched case-sensitively — pass lowercase, e.g.
 % \begin{callout}{info}
 
@@ -124,6 +128,7 @@
 {%
   \def\callouttype{#1}%
   \setcalloutaccent{#1}%
+  \stepcounter{callout}
   \IfNoValueTF{#2}
     {\setcallouttitlefromtype{#1}}
     {\def\callouttitle{#2}}%
@@ -142,7 +147,7 @@
     coltitle=black,
     colback=\calloutaccent!10,
     colframe=\calloutaccent,
-    title={\callouttitle},
+    title={\callouttitle~\thecallout},
     fonttitle=\bfseries
   ]
 }
