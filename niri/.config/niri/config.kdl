@@ -7,10 +7,15 @@ environment {
     QT_QPA_PLATFORMTHEME_QT6 "qt6ct"
 }
 
+cursor {
+    hide-when-typing
+    hide-after-inactive-ms 1000
+}
+
 input {
     keyboard {
         xkb {
-            options "caps:swapescape"
+            options "caps:escape"
         }
         numlock
     }
