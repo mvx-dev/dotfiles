@@ -20,11 +20,18 @@ if not test -d "$source_dir"
     exit 1
 end
 
+if test -n "$replacement_name"
+    set target_dir "$PWD/$replacement_name"
+    mkdir -p "$target_dir"
+else
+    set target_dir "$PWD"
+end
+
 for item in (find "$source_dir" -mindepth 1 -print)
     set -l rel (string replace -r "^$source_dir/?" "" -- "$item")
 
     if test -d "$item"
-        mkdir -p "$PWD/$rel"
+        mkdir -p "$target_dir/$rel"
     else
         set -l dir (dirname "$rel")
         set -l base (basename "$rel")
@@ -34,7 +41,7 @@ for item in (find "$source_dir" -mindepth 1 -print)
             set newbase (string replace -r "^template(\..*)?" "$replacement_name\$1" -- "$base")
         end
 
-        mkdir -p "$PWD/$dir"
-        cp "$item" "$PWD/$dir/$newbase"
+        mkdir -p "$target_dir/$dir"
+        cp "$item" "$target_dir/$dir/$newbase"
     end
 end
