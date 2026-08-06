@@ -7,7 +7,6 @@
 \RequirePackage{calligra}
 \RequirePackage{enumerate}
 \RequirePackage{graphicx}
-\RequirePackage{enumerate}
 \RequirePackage{float}
 \RequirePackage{mathrsfs}
 \RequirePackage{physics}
@@ -21,7 +20,8 @@
 % \addbibresource{~/Documents/references.bib}
 
 \DeclareMathAlphabet{\mathcalligra}{T1}{calligra}{m}{n}
-\newcommand{\scriptr}{\raisebox}
+\DeclareFontShape{T1}{calligra}{m}{n}{<->s*[2.2]callig15}{}
+\newcommand{\scriptr}{\ensuremath{\mathcalligra{r}}}
 
 \newcommand{\diff}{\ensuremath{\operatorname{d}\!}}
 
