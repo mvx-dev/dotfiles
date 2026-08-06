@@ -16,6 +16,8 @@ snippet "([A-Za-z]{2,})([0-9]+)" "A_{123}" riAm
 `!p snip.rv = match.group(1)`_{`!p snip.rv = match.group(2)`}
 endsnippet
 
+priority 20
+
 context "math()"
 snippet "([A-Za-z])0" "x_0" riAm
 `!p snip.rv = match.group(1)`_0
