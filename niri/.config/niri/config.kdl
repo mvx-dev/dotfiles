@@ -59,6 +59,7 @@ layout {
 
 spawn-at-startup "waybar"
 spawn-sh-at-startup "mpd"
+spawn-sh-at-startup "wl-clip-persist --clipboard regular"
 spawn-sh-at-startup "fish -c ~/.config/niri/mpd-mpris-start"
 spawn-sh-at-startup "swaybg -i $HOME/.assets/wallpapers/wallpaper.jpg"
 spawn-sh-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
