@@ -13,6 +13,7 @@ binds {
     Mod+Shift+W hotkey-overlay-title="Wallpaper switcher" { spawn "~/.config/niri/wpmenu"; }
     Mod+S hotkey-overlay-title="Volume Control" { spawn "pwvucontrol"; }
     Mod+W hotkey-overlay-title="Network Management" { spawn-sh "kitty impala"; }
+    Mod+Slash hotkey-overlay-title="Character Select" { spawn "kcharselect"; }
 
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 
