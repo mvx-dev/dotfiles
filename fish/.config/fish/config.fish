@@ -3,7 +3,7 @@ if status is-interactive
 end
 set fish_greeting
 
-alias ls "eza -alo --git --group-directories-first"
+alias ls "eza -lo --git --group-directories-first"
 alias nv nvim
 alias open "handlr open"
 alias mpm matlab-mpm
@@ -21,3 +21,11 @@ function y
     end
     rm -f -- "$tmp"
 end
+
+# BEGIN opam configuration
+# This is useful if you're using opam as it adds:
+#   - the correct directories to the PATH
+#   - auto-completion for the opam binary
+# This section can be safely removed at any time if needed.
+test -r '/home/cheshire/.opam/opam-init/init.fish' && source '/home/cheshire/.opam/opam-init/init.fish' >/dev/null 2>/dev/null; or true
+# END opam configuration
