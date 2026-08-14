@@ -50,6 +50,12 @@ org.freedesktop.impl.portal.FileChooser = kde
 
 This will use the `hyprland` desktop portal wherever possible, fallback to `kde`, and use `dolphin` for file choosing.
 
+#### Font configuration
+Ensure the `fontconfig` package is installed, and user configuration is enabled via
+```bash
+# ln -s /usr/share/fontconfig/conf.avail/50-user.conf /etc/fonts/conf.d/
+```
+
 #### Git/Github Setup
 Ensure git is setup correctly (`user.name` and `user.email` set), and the following packages are installed:
 
