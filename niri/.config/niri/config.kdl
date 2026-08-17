@@ -7,10 +7,15 @@ environment {
     QT_QPA_PLATFORMTHEME_QT6 "qt6ct"
 }
 
+cursor {
+    hide-when-typing
+    hide-after-inactive-ms 1000
+}
+
 input {
     keyboard {
         xkb {
-            options "caps:swapescape"
+            options "caps:escape"
         }
         numlock
     }
@@ -54,6 +59,7 @@ layout {
 
 spawn-at-startup "waybar"
 spawn-sh-at-startup "mpd"
+spawn-sh-at-startup "wl-clip-persist --clipboard regular"
 spawn-sh-at-startup "fish -c ~/.config/niri/mpd-mpris-start"
 spawn-sh-at-startup "swaybg -i $HOME/.assets/wallpapers/wallpaper.jpg"
 spawn-sh-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"

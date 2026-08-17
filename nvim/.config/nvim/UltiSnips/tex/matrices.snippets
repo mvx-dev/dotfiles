@@ -3,33 +3,37 @@ global !p
 from globals import *
 endglobal
 
-
-snippet pm "pmatrix" wm
+context "math()"
+snippet "(^|\s)pm" "pmatrix" rwmA
 \begin{pmatrix}
 	$1
 \end{pmatrix}$0
 endsnippet
 
-snippet bm "bmatrix" wm
+context "math()"
+snippet bm "bmatrix" wmA
 \begin{bmatrix}
 	$1
 \end{bmatrix}$0
 endsnippet
 
-snippet vm "vmatrix" wm
+context "math()"
+snippet vm "vmatrix" wmA
 \begin{vmatrix}
 	$1
 \end{vmatrix}$0
 endsnippet
 
-snippet cm "cases" wm
+context "math()"
+snippet cm "cases" wmA
 \begin{cases}
 	$1 & $2 \\\\
 	$3 & $4
 \end{cases}$0
 endsnippet
 
-snippet mat "matrix" wm
+context "math()"
+snippet mat "matrix" wmA
 \begin{matrix}
 	$1
 \end{matrix}$0

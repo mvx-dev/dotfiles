@@ -27,6 +27,11 @@ vim.lsp.config["verible"] = {
 	root_markers = { ".git", "verible.filelist" },
 }
 
+vim.lsp.config["wgsl-analyzer"] = {
+	cmd = { "wgsl-analyzer" },
+	filetypes = { "wgsl", "wesl" },
+}
+
 vim.lsp.enable({
 	"lua_ls",
 	"clangd",
@@ -42,7 +47,8 @@ vim.lsp.enable({
 	"ruff",
 	"verible",
 	"texlab",
-    "taplo"
+	"taplo",
+	"wgsl-analyzer",
 })
 vim.cmd("set completeopt+=noselect")
 

@@ -13,8 +13,9 @@ snippet lb "\left[ \right]" wmA
 \left[ $1 \right]$0
 endsnippet
 
-snippet lc "\left\{ \right\}" wm
-\left\{ $1 \right\}$0
+context "math()"
+snippet lc "\left\{ \right\}" wmA
+\left\\\{ $1 \right\\\}$0
 endsnippet
 
 snippet abs "\left| \right|" wm
@@ -37,6 +38,10 @@ snippet avg "\langle\rangle" wm
 \left\langle $1 \right\rangle $0
 endsnippet
 
-snippet __ "Subscript" iAm
+snippet __ "Sub script" iAm
 _{$1}$0
+endsnippet
+
+snippet ^^ "Super script" iAm
+^{$1}$0
 endsnippet
