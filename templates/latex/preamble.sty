@@ -15,6 +15,7 @@
 \RequirePackage{textcomp}
 \RequirePackage{pdfpages}
 \RequirePackage{minted}
+\RequirePackage[autostyle,english=british]{csquotes}
 \RequirePackage[margin=1in]{geometry}
 
 % \RequirePackage[backend=biber]{biblatex}
@@ -66,8 +67,6 @@
 
 % NOTE: type keys are matched case-sensitively - pass lowercase, e.g.
 % \begin{callout}{info}
-
-% Use callout* to disable counter
 
 \newcommand{\setcallouttitlefromtype}[1]{%
     \IfStrEqCase{#1}{%
@@ -190,3 +189,8 @@
 
 % Must be imported last
 \RequirePackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue
+}
