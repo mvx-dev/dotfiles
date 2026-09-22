@@ -6,7 +6,7 @@ endglobal
 priority 10
 
 context "math()"
-snippet "([A-Za-z])hat" "\hat{x}" riAm
+snippet "([A-Za-z])hh" "\hat{x}" riAm
 \hat{`!p snip.rv = match.group(1)`}
 endsnippet
 
@@ -38,6 +38,11 @@ endsnippet
 context "math()"
 snippet vv "\vec{}" wAm
 \vec{$1}$0
+endsnippet
+
+context "math()"
+snippet hh "hat" wAm
+\hat{$1}$0
 endsnippet
 
 context "math()"
