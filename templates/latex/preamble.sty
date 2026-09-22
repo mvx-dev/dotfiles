@@ -133,7 +133,7 @@
 {%
   \def\callouttype{#1}%
   \setcalloutaccent{#1}%
-  \stepcounter{callout}
+  \refstepcounter{callout}
   \IfNoValueTF{#2}
     {\setcallouttitlefromtype{#1}}
     {\def\callouttitle{#2}}%
