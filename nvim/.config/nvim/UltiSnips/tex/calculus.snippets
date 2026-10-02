@@ -28,8 +28,9 @@ snippet prod "\prod_{i=1}^{n}" wm
 \prod_{${1:i=1}}^{${2:n}} $0
 endsnippet
 
-snippet lim "\lim_{x\to\infty}" wm
-\lim_{${1:x}\to${2:\infty}} $0
+context "math()"
+snippet lim "\lim_{x\to\infty}" wmA
+\lim_{${1:x}\to ${2:\infty}} $0
 endsnippet
 
 snippet ff "\frac{}{}" wmA
