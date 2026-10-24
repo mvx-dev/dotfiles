@@ -29,7 +29,7 @@ end, { range = true })
 vim.keymap.set("n", "grq", ":Format<CR>")
 
 -- UltiSnips
-vim.g.UltiSnipsExpandTrigger = "<C-j>"
+vim.g.UltiSnipsExpandTrigger = "<Tab>"
 vim.g.UltiSnipsJumpForwardTrigger = "<Tab>"
 vim.g.UltiSnipsJumpBackwardTrigger = "<S-Tab>"
 
