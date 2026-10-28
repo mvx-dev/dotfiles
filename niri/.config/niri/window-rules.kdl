@@ -9,6 +9,11 @@ window-rule {
 }
 
 window-rule {
+    match app-id="kitty" title="Network Management"
+    open-floating true
+}
+
+window-rule {
     match app-id="Pinentry-gtk"
     open-floating true
 }
@@ -27,6 +32,12 @@ window-rule {
     match app-id=r#"firefox$"#
     match app-id="kitty" title="termusic-player"
     match app-id="kitty" title="rmpc-player"
+    match app-id="kicad" title=r#"^Editor$"#
+    open-maximized true
+}
+
+window-rule {
+    match app-id="kicad" title=r#"^Editor$"#
     open-maximized true
 }
 
