@@ -225,8 +225,8 @@
                         (kind: Property(Status(RepeatV2(
                             on_label: "z",
                             off_label: "z",
-                            on_style: (fg: "yellow", modifiers: "Bold"),
-                            off_style: (fg: "blue", modifiers: "Dim"),
+                            on_style: (fg: "#cba6f7", modifiers: "Bold"),
+                            off_style: (fg: "#b4befe", modifiers: "Dim")
                         )))),
                         (kind: Property(Status(RandomV2(
                             on_label: "x",
