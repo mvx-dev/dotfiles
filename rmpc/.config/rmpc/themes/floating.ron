@@ -18,9 +18,9 @@
                 size: "100%",
             ),
             (
-                pane: Pane(ProgressBar),
-                size: "1",
-            ),
+                pane: Component("state"),
+                size: "1"
+            )
         ],
     ),
     progress_bar: (
@@ -88,12 +88,47 @@
         ],
     ),
     components: {
+        "state": Split(
+            direction: Horizontal,
+            panes: [
+                (
+                    size: "88%",
+                    pane: Pane(ProgressBar),
+                ),
+                (
+                    size: "12%",
+                    pane: Component("elapsed")
+                )
+            ]
+        ),
         "elapsed": Pane(Property(
             content: [
                 (kind: Property(Status(Elapsed))),
                 (kind: Text(" / ")),
                 (kind: Property(Status(Duration))),
-                (kind: Property(State))
+                (kind: Text(" ")),
+                (kind: Property(Status(RepeatV2(
+                    on_label: "z", off_label: "z",
+                    on_style: (fg: "#cba6f7", modifiers: "Bold"),
+                    off_style: (fg: "#b4befe", modifiers: "Dim")
+                )))),
+                (kind: Property(Status(RandomV2(
+                    on_label: "x", off_label: "x",
+                    on_style: (fg: "#cba6f7", modifiers: "Bold"),
+                    off_style: (fg: "#b4befe", modifiers: "Dim")
+                )))),
+                (kind: Property(Status(ConsumeV2(
+                    on_label: "c", off_label: "c",
+                    on_style: (fg: "#cba6f7", modifiers: "Bold"),
+                    off_style: (fg: "#b4befe", modifiers: "Dim"),
+                    oneshot_style: (fg: "#f38ba8", modifiers: "Dim"),
+                )))),
+                (kind: Property(Status(SingleV2(
+                    on_label: "v", off_label: "v",
+                    on_style: (fg: "#cba6f7", modifiers: "Bold"),
+                    off_style: (fg: "#b4befe", modifiers: "Dim"),
+                    oneshot_style: (fg: "#f38ba8", modifiers: "Dim"),
+                )))),
             ],
             align: Left,
         ))
