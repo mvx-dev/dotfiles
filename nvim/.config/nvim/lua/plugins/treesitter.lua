@@ -19,3 +19,10 @@ require("nvim-treesitter").install({
 	"wgsl",
 	"ron",
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { "ron" },
+	callback = function()
+		vim.treesitter.start()
+	end,
+})

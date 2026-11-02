@@ -32,6 +32,12 @@ vim.lsp.config["wgsl-analyzer"] = {
 	filetypes = { "wgsl", "wesl" },
 }
 
+vim.lsp.config["ron-lsp"] = {
+    cmd = { "ron-lsp" },
+    filetypes = { "ron" },
+    root_markers = { ".git", "Cargo.toml" },
+}
+
 vim.lsp.enable({
 	"lua_ls",
 	"clangd",
@@ -49,6 +55,7 @@ vim.lsp.enable({
 	"texlab",
 	"taplo",
 	"wgsl-analyzer",
+    "ron-lsp"
 })
 vim.cmd("set completeopt+=noselect")
 
