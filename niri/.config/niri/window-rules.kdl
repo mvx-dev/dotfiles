@@ -9,7 +9,7 @@ window-rule {
 }
 
 window-rule {
-    match app-id="kitty" title=r#"Music Player \(floating\)"#
+    match app-id="foot" title=r#"Music Player \(floating\)"#
     default-column-width { proportion 0.5; }
     default-window-height { proportion 0.4; }
     default-floating-position x=0 y=0 relative-to="top"
@@ -36,9 +36,9 @@ window-rule {
 
 window-rule {
     match app-id=r#"firefox$"#
-    match app-id="kitty" title="rmpc-player"
-    match app-id="kitty" title="termusic-player"
-    match app-id="kitty" title=r#"^Music Player \(window\)$"#
+    match app-id="foot" title="rmpc-player"
+    match app-id="foot" title="termusic-player"
+    match app-id="foot" title=r#"^Music Player \(window\)$"#
     match app-id="kicad" title=r#"Editor"#
     open-maximized true
 }
