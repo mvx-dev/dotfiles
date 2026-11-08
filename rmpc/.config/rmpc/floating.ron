@@ -34,7 +34,7 @@
     keybinds: (
         clear: true,
         global: {
-            "q":          Quit,
+            "<Esc>":      Quit,
             "?":          ShowHelp,
             ":":          CommandMode,
             "oI":         ShowCurrentSongInfo,
@@ -60,7 +60,7 @@
         },
         navigation: {
             "<C-c>":      Close,
-            "<Esc>":      Close,
+            "q":          Close,
             "<CR>":       Confirm,
             "k":          Up,
             "<Up>":       Up,
