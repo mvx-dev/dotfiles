@@ -45,7 +45,7 @@
         "format": "{dynamic}",
         "interval": 1,
         "dynamic-len": 100,
-        "on-click-right": "kitty --title=\"Music Player (floating)\" rmpc -c $HOME/.config/rmpc/floating.ron"
+        "on-click-right": "foot --title=\"Music Player (floating)\" rmpc -c $HOME/.config/rmpc/floating.ron"
     },
     "network": {
         "format-wifi": "",
