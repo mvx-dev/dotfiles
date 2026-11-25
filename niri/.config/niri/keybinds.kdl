@@ -14,8 +14,8 @@ binds {
     Mod+S hotkey-overlay-title="Volume Control" { spawn "pwvucontrol"; }
     Mod+W hotkey-overlay-title="Network Management" { spawn-sh "foot --title=\"Network Management (floating)\" impala"; }
     Mod+Slash hotkey-overlay-title="Character Select" { spawn "kcharselect"; }
-    Mod+M hotkey-overlay-title="Open Music Player" { spawn-sh "foot --title=\"Music Player (window)\" rmpc"; }
-    Mod+Shift+M hotkey-overlay-title="Open Music Player (floating)" { spawn-sh "foot --title=\"Music Player (floating)\" rmpc -c $HOME/.config/rmpc/floating.ron"; }
+    Mod+Shift+M hotkey-overlay-title="Open Music Player" { spawn-sh "foot --title=\"Music Player (window)\" rmpc"; }
+    Mod+M hotkey-overlay-title="Open Music Player (floating)" { spawn-sh "foot --title=\"Music Player (floating)\" rmpc -c $HOME/.config/rmpc/floating.ron"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+ -l 1.0"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-"; }
